@@ -17,7 +17,6 @@ while True:
         result = hand.process(frame)
         if result.multi_hand_landmarks:
             for hand_landmarks in result.multi_hand_landmarks:
-                print(hand_landmarks)
                 mp_drawing.draw_landmarks(frame, hand_landmarks,mp_hands.HAND_CONNECTIONS)
 
         cv2.imshow("capture image", frame)
